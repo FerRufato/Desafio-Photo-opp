@@ -14,7 +14,10 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3003")  // Libera só o frontend
+                        .allowedOrigins("http://localhost:3003",
+                        "https://desafio-photo-opp-frontend.vercel.app/"
+                        )
+
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
             }

@@ -1,6 +1,5 @@
 package com.photoopp.service;
 
-import com.photoopp.model.LogParticipacao;
 import com.photoopp.repository.LogParticipacaoRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +14,7 @@ public class LogParticipacaoService {
         this.logParticipacaoRepository = logParticipacaoRepository;
     }
 
-    public LogParticipacao save(LogParticipacao logParticipacao) {
-        return logParticipacaoRepository.save(logParticipacao);
-    }
-
-    public List<LogParticipacao> findAll() {
-        return logParticipacaoRepository.findAll();
+    public List<Object[]> contarParticipacoesPorDia() {
+        return logParticipacaoRepository.contarParticipacoesPorDia();
     }
 }
